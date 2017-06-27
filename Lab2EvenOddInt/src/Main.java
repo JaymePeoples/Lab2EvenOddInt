@@ -11,12 +11,11 @@ public class Main {
         System.out.print("Please enter your name: ");
         userName = scnr.next();
 
-        while (userChoice.equalsIgnoreCase("y")) {
+        while (userChoice.equalsIgnoreCase("y")) {//Will allow a continuous loop until 'n' is typed; ignores case
+            System.out.println(userName + " enter a number 1 - 100");
+            userNum = scnr.nextInt();
 
-        System.out.println(userName + " enter a number 1 - 100");
-        userNum = scnr.nextInt();
-
-        while (userNum > 100 | userNum < 1) {
+        while (userNum > 100 | userNum < 1) {//Will validate that the int is positive
             System.out.println(userName + " please enter a number 1-100.");
             userNum = scnr.nextInt();
         }
@@ -44,7 +43,7 @@ public class Main {
                 System.out.println("Continue? Type (y/n)");
                 userChoice = scnr.next();
             }
-            System.out.println("Thanks for playing " + userName);//If user enters anything other than yes, will direct here.
+            System.out.println("Thanks for playing " + userName);//If user enters anything other than 'y', will direct here.
             }
         }
 
